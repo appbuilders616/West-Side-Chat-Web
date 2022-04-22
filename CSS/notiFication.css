@@ -1,10 +1,26 @@
-body {
-    background-color: #ececec;
+* {
+    --bg: #e7e7e7;
+    --primary: #2ce23b;
+    --red: crimson;
+    --black: #111;
+    --dev: solid 2px lime;
+    --dark-green: rgb(10, 112, 10);
+    position: relative;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    background-color: var(--bg);
     overflow-x: hidden;
     font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    --texts: rgb(35, 46, 39);
 }
 
 a {
@@ -19,73 +35,83 @@ ul {
     width: 1px;
 }
 
+hr {
+    width: 80%;
+}
+
 .pageHeader {
-    z-index: 10;
-    height: 60px;
+    z-index: 5;
     width: 100%;
-    position: sticky;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    height: 10vh;
+    padding: 2vmin;
+    position: absolute;
     top: 0;
-    padding: 0%;
-    background-color: #ececec;
+    background: var(--bg);
 }
 
 .pageHeader p {
     font-size: 30px;
     font-weight: 500;
-    margin: 20px;
-    color: green;
+    padding-left: 4vmin;
+    color: var(--dark-green);
 }
 
 .container {
-    z-index: 10;
-    height: 50px;
+    z-index: 5;
+    height: 10vh;
     width: 100%;
-    box-shadow: 16px 16px 18px #cbced1, -16px -16px 18px #cab8b8;
+    box-shadow: 0px 4vmin 8vmin #000000;
     position: fixed;
     bottom: 0;
     background-color: #F0FFF0;
 }
 
 .container .pageNav {
+    width: 100vw;
+    height: 10vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
 
-.container .pageNav span {
-    width: 70px;
-    height: 70%;
-    display: inline-block;
+.container .pageNav > *{
+    width: 25vw;
 }
 
-.container .pageNav span i {
-    width: 80px;
+.container .pageNav div i {
     bottom: 0;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     font-size: 30px;
-    color: rgb(142, 214, 33);
+    color: var(--primary);
 }
 
-.container .pageNav span .counter {
-    height: 20px;
-    width: 20px;
+.container .pageNav div .counter {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     position: absolute;
-    top: 0;
-    margin-left: 50px;
+    top: -1vmin;
+    right: 30%;
     font-weight: bold;
     font-size: 25px;
-    color: rgb(134, 41, 24);
+    color: var(--red);
+}
+
+/* desktop */
+@media screen and (min-width: 550px) {
+    .container .pageNav div .counter {
+        right: 37%;
+    }
+}
+/* mobile */
+@media screen and (max-width: 427px){
+    .container .pageNav div .counter {
+        right: 20%;
+    }
 }
 
 
@@ -110,7 +136,7 @@ ul {
     font-size: 20px;
     font-weight: 500;
     margin: 15px;
-    color: rgb(134, 41, 24);
+    color: var(--texts);
 }
 
 .allNotifications .notiFications .singleNotes hr {
