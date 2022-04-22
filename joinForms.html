@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/joinForms.css">
+    <title>join US</title>
+</head>
+
+<body>
+
+    <div id="container" class="container">
+        <div id="tabs" class="tabs-container">
+
+            <div class="tabs">
+                <a id="tab1" data-tab="1" class="tab">Log In</a>
+                <a id="tab2" data-tab="2" class="tab">Sign Up</a>
+            </div>
+
+            <div class="content">
+                <div id="tabcontent1" data-tab="1" class="tabcontent">
+                    <div class="Formcontainer">
+                        <header>LogIn Form</header>
+                        <form action="#">
+                            <div class="field email">
+                                <div class="input-area">
+                                    <input type="text" placeholder="Email Address">
+                                    <i class="icon fas fa-envelope"></i>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    <div class="error error-text">Email can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="field password">
+                                <div class="input-area">
+                                    <input type="password" placeholder="Email Password">
+                                    <i class="icon fas fa-lock"></i>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    <div class="error error-text">Password can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="pass-link"><a href="#">Forgot Password?</a></div>
+                            <input type="submit" value="Login">
+
+                        </form>
+                    </div>
+                </div>
+
+                <div id="tabcontent2" data-tab="2" class="tabcontent">
+                    <div class="Formcontainer">
+                        <header>SignUp Form</header>
+                        <form action="#">
+                            <div class="field email">
+                                <div class="input-area">
+                                    <input type="text" placeholder="Email Address">
+                                    <i class="icon fas fa-envelope"></i>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    <div class="error error-text">Email can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="field email">
+                                <div class="input-area">
+                                    <input type="text" placeholder="Full Name">
+                                    <i class="icon fas fa-envelope"></i>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    <div class="error error-text">Email can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="field email">
+                                <div class="input-area">
+                                    <input type="text" placeholder="Full Username">
+                                    <i class="icon fas fa-envelope"></i>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    <div class="error error-text">Email can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="field password">
+                                <div class="input-area">
+                                    <input type="password" placeholder="Email Password">
+                                    <i class="icon fas fa-lock"></i>
+                                    <i class="error error-icon fas fa-exclamation-circle"></i>
+                                    <div class="error error-text">Password can't be blank</div>
+                                </div>
+                            </div>
+
+                            <div class="pass-link"><a href="#tab1">Already have an account?</a></div>
+                            <input type="submit" value="Login">
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="dark-mode-switch">
+            <label class="switch-label" for="dark-mode-switch">Dark mode</label>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-switch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+
+    </div>
+
+
+    <!-- ---------------------- -->
+
+    <div class="small-screen">
+        <div class="small-screen-content tabcontent">
+            <p>You're going to need a bigger display my friend.</p>
+            <p class="read-more-link"><a href="https://www.samsung.com/uk/monitors/monitor-c49j89-lc49j890dkuxen/" target="_blank">Learn more<span class="icon">➡️</span></a></p>
+        </div>
+    </div>
+
+    <script src="./js/joinForms.js"></script>
+
+</body>
+
+</html>

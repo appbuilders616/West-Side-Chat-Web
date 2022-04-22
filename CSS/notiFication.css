@@ -1,0 +1,121 @@
+body {
+    background-color: #ececec;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+ ::-webkit-scrollbar {
+    width: 1px;
+}
+
+.pageHeader {
+    z-index: 10;
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    top: 0;
+    padding: 0%;
+    background-color: #ececec;
+}
+
+.pageHeader p {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 20px;
+    color: green;
+}
+
+.container {
+    z-index: 10;
+    height: 50px;
+    width: 100%;
+    box-shadow: 16px 16px 18px #cbced1, -16px -16px 18px #cab8b8;
+    position: fixed;
+    bottom: 0;
+    background-color: #F0FFF0;
+}
+
+.container .pageNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.container .pageNav span {
+    width: 70px;
+    height: 70%;
+    display: inline-block;
+}
+
+.container .pageNav span i {
+    width: 80px;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    font-size: 30px;
+    color: rgb(142, 214, 33);
+}
+
+.container .pageNav span .counter {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    margin-left: 50px;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(134, 41, 24);
+}
+
+
+/* ====================Notifications codes goes here======================== */
+
+.allNotifications .notiFications {
+    margin-top: 20px;
+}
+
+.allNotifications .notiFications .singleNotes {
+    line-height: normal;
+    height: 95px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.allNotifications .notiFications .singleNotes:last-child {
+    margin-bottom: 50px;
+}
+
+.allNotifications .notiFications .singleNotes p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 15px;
+    color: rgb(134, 41, 24);
+}
+
+.allNotifications .notiFications .singleNotes hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ececec;
+    margin: 0;
+}
