@@ -4,7 +4,7 @@
     --red: crimson;
     --black: #111;
     --dev: solid 2px lime;
-    --dark-green: rgb(10, 112, 10);
+    --dark-green: rgb(9, 216, 78);
     position: relative;
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    --texts: rgb(35, 46, 39);
+    --texts: rgb(33, 102, 76);;
 }
 
 a {
@@ -63,7 +63,7 @@ hr {
     box-shadow: 0px 4vmin 8vmin #000000;
     position: fixed;
     bottom: 0;
-    background-color: #F0FFF0;
+    background-color: #ecf3ee;
 }
 
 .container .pageNav {
@@ -122,10 +122,8 @@ hr {
 }
 
 .allNotifications .notiFications .singleNotes {
-    line-height: normal;
     height: 95px;
     width: 100%;
-    margin-bottom: 10px;
 }
 
 .allNotifications .notiFications .singleNotes:last-child {
@@ -133,9 +131,9 @@ hr {
 }
 
 .allNotifications .notiFications .singleNotes p {
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: 500;
-    margin: 15px;
+    margin: 1rem;
     color: var(--texts);
 }
 
@@ -143,5 +141,4 @@ hr {
     width: 100%;
     height: 1px;
     background-color: #ececec;
-    margin: 0;
 }
