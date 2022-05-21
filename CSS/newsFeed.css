@@ -55,7 +55,7 @@ ul {
 .container {
     z-index: 5;
     height: 10vh;
-    width: 100%;
+    width: 100vw;
     box-shadow: 0px 4vmin 8vmin #000000;
     position: fixed;
     bottom: 0;
