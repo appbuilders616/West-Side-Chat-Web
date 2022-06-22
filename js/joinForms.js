@@ -114,7 +114,7 @@ form.addEventListener("submit", (e) => {
     }
 
     if (!eField.classList.contains("error") && !pField.classList.contains("error")) {
-        window.location.href = "./appSelf.html";
+        window.location.href = "/appSelf.html";
         console.log("credentials matches");
     }
 

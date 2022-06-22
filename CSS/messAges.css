@@ -1,168 +1,55 @@
-* {
-    --bg: #e7e7e7;
-    --primary: #2ce23b;
-    --red: crimson;
-    --black: #111;
-    --dev: solid 2px lime;
-    --dark-green: rgb(9, 216, 78);
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: var(--bg);
-    overflow-x: hidden;
-    font-family: sans-serif;
+.messages {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    /* height: 100vh; */
-    --desc: rgb(33, 102, 76);
-    --names: #54cf5e;
+    /* gap: 3rem; */
 }
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
- ::-webkit-scrollbar {
-    width: 1px;
-}
-
-hr {
-    width: 100%;
-}
-
-.pageHeader {
-    z-index: 5;
-    width: 100%;
-    height: 10vh;
-    padding: 2vmin;
-    position: absolute;
-    top: 0;
-    background: var(--bg);
-}
-
-.pageHeader p {
-    font-size: 30px;
-    font-weight: 500;
-    padding-left: 4vmin;
-    color: var(--dark-green);
-}
-
-.container {
-    z-index: 5;
-    height: 10vh;
-    width: 100vw;
-    box-shadow: 0px 4vmin 8vmin #000000;
-    position: fixed;
-    bottom: 0;
-    background-color: #ecf3ee;
-}
-
-.container .pageNav {
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-}
-
-.container .pageNav > *{
-    width: 25vw;
-}
-
-.container .pageNav div i {
-    bottom: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: var(--primary);
-}
-
-.container .pageNav div .counter {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    top: -1vmin;
-    right: 30%;
-    font-weight: bold;
-    font-size: 25px;
-    color: var(--red);
-}
-
-/* desktop */
-@media screen and (min-width: 550px) {
-    .container .pageNav div .counter {
-        right: 37%;
-    }
-}
-/* mobile */
-@media screen and (max-width: 427px){
-    .container .pageNav div .counter {
-        right: 20%;
-    }
-}
-
-
-/* ====================Messages codes goes here======================== */
-.activeUSers{
-    width: 100vw;
-    padding-bottom: 10vh;
-}
-.usersBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.5vmin;
-    margin-top: 10vh;
-}
-.activeUSers .singleUser .userProfile {
-    width: 90vw;
+.msg {
     display: grid;
-    grid-template-areas: 
-    "img name"
-    "img msg";
-    grid-template-columns: 1.5fr 6fr;
+    grid-template-areas:
+        "pic sender"
+        "pic txt";
+    grid-template-columns: 1fr 6fr;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 2rem);
+    /* height: 15vmin; */
+    /* box-shadow: 0 0 4px 1px #ccc; */
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.msg:focus,
+.msg:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+/* .msg > *{
+    border: 2px solid;
+} */
+.msg_sender,
+.msg_text,
+.msg_pic {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.msg_pic {
+    grid-area: pic;
     justify-content: center;
 }
-
-.singleUser .userProfile .imgBox {
-    height: 20vmin;
-    width: 20vmin;
+.msg_pic_src {
+    width: 15vmin;
+    height: 15vmin;
     border-radius: 50%;
-    grid-area: img;
 }
-
-.singleUser .userProfile .imgBox img {
-    height: 100%;
-    border-radius: 50%;
-    width: 100%;
-}
-
-.singleUser .userProfile .accName {
-    grid-area: name;
-    padding-left: 4vmin;
-    padding-top: 2vmin;
-    font-size: 20px;
+.msg_sender {
+    grid-area: sender;
+    padding-left: 2rem;
     font-weight: bold;
-    color: var(--names);
 }
-
-.singleUser .userProfile .recentMsg {
-    grid-area: msg;
-    padding: 1vmin 0vmin 1vmin 4vmin;
-    color: var(--desc);
+.msg_text {
+    grid-area: txt;
+    padding-left: 2rem;
+    opacity: 0.7;
 }

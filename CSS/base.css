@@ -1,0 +1,64 @@
+* {
+    --bg: #e7e7e7;
+    --primary: #2ce23b;
+    --red: crimson;
+    --black: #111;
+    --dev: solid 2px lime;
+    --dark-green: rgb(9, 216, 78);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    background-color: var(--bg);
+    overflow-x: hidden;
+    font-family: sans-serif;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header" "content" "footer";
+}
+.header {
+    width: 100%;
+    height: 10vh;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    grid-area: header;
+    color: var(--dark-green);
+    font-weight: 500;
+    font-size: 2rem;
+    background: beige;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1rem;
+}
+.content {
+    /* page content goes in here */
+    /* margin-top: 10vh;
+    margin-bottom: 10vh; */
+    grid-area: content;
+    /* overflow-y: auto; */
+    /* height: 80vh; */
+}
+.tabs {
+    z-index: 1;
+    height: 10vh;
+    width: 100vw;
+    /* box-shadow: 0px 4vmin 8vmin #000000; */
+    position: fixed;
+    bottom: 0;
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: beige;
+}
+.tab_item {
+    text-decoration: none;
+    color: var(--primary);
+}

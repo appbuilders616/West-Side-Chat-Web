@@ -1,226 +1,78 @@
-* {
-    --bg: #e7e7e7;
-    --primary: #2ce23b;
-    --red: crimson;
-    --black: #111;
-    --dev: solid 2px lime;
-    --dark-green: rgb(9, 216, 78);
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: var(--bg);
-    overflow-x: hidden;
-    font-family: sans-serif;
+.posts {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    --name: #17ce27;
-    --reactions: rgb(236, 52, 98);
+    width: calc(100vw - 2rem);
+    height: 100%;
+    gap: 2rem;
 }
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
- ::-webkit-scrollbar {
-    width: 1px;
-}
-
-.pageHeader {
-    z-index: 5;
+.post{
+    border-radius: 0.3rem;
+    /* background: rgb(139, 139, 139); */
+    box-shadow: 0 0 6px #bbb;
+    overflow: hidden;
     width: 100%;
-    height: 10vh;
-    padding: 2vmin;
-    position: absolute;
-    top: 0;
+    height: 100%;
 }
-
-.pageHeader p {
-    font-size: 30px;
-    font-weight: 500;
-    padding-left: 4vmin;
-    color: var(--dark-green);
+.post_header {
+    display: grid;
+    grid-template-areas:
+        "profile-pic profile-name"
+        "profile-pic last-seen";
+    grid-template-columns: 2fr 6fr;
+    justify-content: center;
+    align-items: center;
+    /* width: calc(100% - 2rem); */
+    /* height: 15vmin; */
+    /* box-shadow: 0 0 4px 1px #ccc; */
 }
-
-.container {
-    z-index: 5;
-    height: 10vh;
-    width: 100vw;
-    box-shadow: 0px 4vmin 8vmin #000000;
-    position: fixed;
-    bottom: 0;
-    background-color: #ecf3ee;
+/* .post_header > *{
+    border: 2px solid;
+} */
+.post_sender-pic,
+.post_sender-last-seen,
+.post_sender-name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
-
-.container .pageNav {
-    width: 100vw;
-    height: 10vh;
+.post_sender-pic {
+    grid-area: profile-pic;
+    justify-content: center;
+}
+.post_pic_src {
+    width: 13vmin;
+    height: 13vmin;
+    border-radius: 50%;
+}
+.post_sender-name {
+    grid-area: profile-name;
+    font-weight: bold;
+    /* padding-left: 1rem; */
+}
+.post_sender-last-seen {
+    grid-area: last-seen;
+    opacity: 0.7;
+    /* padding-left: 1rem; */
+}
+.post_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.post_content_src {
+    width: 100%;
+    height: 40vmin;
+    object-fit: cover;
+}
+.post_reactions{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
-}
-
-.container .pageNav > *{
-    width: 25vw;
-}
-
-.container .pageNav div i {
-    bottom: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: var(--primary);
-}
-
-.container .pageNav div .counter {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    top: -1vmin;
-    right: 30%;
-    font-weight: bold;
-    font-size: 25px;
-    color: var(--red);
-}
-
-/* desktop */
-@media screen and (min-width: 550px) {
-    .container .pageNav div .counter {
-        right: 37%;
-    }
-}
-/* mobile */
-@media screen and (max-width: 427px){
-    .container .pageNav div .counter {
-        right: 20%;
-    }
-}
-
-/* ------------------FEEDS=----------------------- */
-
-.newsFeedContainer {
-    width: 100vw;
-    height: 100vh;
-    padding-top: 10vh;
-}
-.newsFeedBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 4vmin;
-}
-
-.newsFeedContainer .newsFeedBox .singleFeed {
-    /* height: 40vmin; */
-    width: 95vmin;
-    background: #e1e4e2;
-}
-
-.profile {
-    background: rgb(178, 196, 184);
-}
-
-.newsFeedContainer .newsFeedBox .singleFeed:last-child {
-    margin-bottom: 15vh;
-}
-/* ==================For AccNAme &&&&&&&& Pic============== */
-
-.newsFeedContainer .newsFeedBox .singleFeed .profile {
-    display: grid;
-    grid-template-areas: 
-    "profile-pic name"
-    "profile-pic date";
-    grid-template-columns: 1fr 4fr;
-    justify-content: center;
-    align-items: center;
-}
-
-.newsFeedBox .singleFeed .profile .postDate {
-    grid-area: date;
-    color: rgb(44, 82, 60);
-    font-weight: 500;
-    font-size: 15px;
-}
-
-.newsFeedBox .singleFeed .profile .profilePic {
-    grid-area: profile-pic;
-    height: 13vmin;
-    width: 13vmin;
-}
-
-.newsFeedBox .singleFeed .profile .profilePic img {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-}
-
-.newsFeedBox .singleFeed .profile .accName {
-    grid-area: name;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--name);
-}
-
-/* =====================FOr Post Image========================== */
-
-.newsFeedContainer .newsFeedBox .imageBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3vmin;
-}
-
-.newsFeedBox .singleFeed .imageBox img {
-    border-radius:4vmin;
-    height: 50vmin;
-    width: 90%;
-    object-fit: cover;
-}
-/* ====================For Reaction================================== */
-
-.newsFeedBox .singleFeed .reactionSystem {
-    width: 100%;
-    padding: 3vmin;
-    background: #daddda;
-}
-
-.newsFeedBox .singleFeed .reactionSystem ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 2rem;
-}
-
-.newsFeedBox .singleFeed .reactionSystem ul li i {
-    font-size: 30px;
-    color: var(--reactions);
-}
-
-.newsFeedBox .singleFeed .reactionSystem ul .likeSys {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-}
-
-/* desktop */
-@media screen and (min-width: 550px) {
-    .newsFeedContainer .newsFeedBox .singleFeed {
-        width: 100vmin;
-    }
+    height: 10vmin;
+    /* background: lime; */
 }

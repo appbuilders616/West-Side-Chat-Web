@@ -5,122 +5,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fontawesome-free/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="./CSS/profile.css">
+    <link rel="stylesheet" href="/fontawesome-free/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/profile.css">
     <title>WestSide Chat</title>
 </head>
 
 <body>
+    <main class="main">
+        <header class="header">Account</header>
 
-    <div class="pageHeader">
-        <p>Account</p>
-    </div>
-
-    <div class="container">
-        <div class="elements">
-            <div class="pageNav">
-
-                <div class="newsFeed">
-                    <div>
-                       <a href="./newsFeed.html">
-                        <i class="pageNaver fas fa-home"></i>
-                       </a>
-                   </div>
+        <section class="content">
+            <div class="profile">
+                <div class="profile_pic">
+                    <img class="profile_pic_img" src="/imgs/tomatoes.jpg" alt="">
+                    <div class="profile_edit"><i class="far fa-edit"></i></div>
                 </div>
+                <div class="profile_name">Michael Arthur</div>
 
-                <div class="notiFications">
-                    <div>
-                        <a href="./notiFication.html">
-                            <i class="pageNaver fas fa-bell"></i>
-                        </a>
-                        <div class="counter counterMessage">
-                            <p>0</p>
-                        </div>
-                   </div>
-                </div>
-
-                <div class="messAges">
-                    <div>
-                        <a href="./messAges.html">
-                            <i class="pageNaver fas fa-paper-plane"></i>
-                        </a>
-                        <div class="counter counterNotify">
-                            <p>0</p>
-                        </div>
-                   </div>
-                </div>
-
-                <div class="page1 close">
-                    <div>
-                        <a href="./profile.html">
-                            <i class="pageNaver fas fa-user"></i>
-                        </a>
+                <div class="stats">
+                    <div class="stat_posts">
+                        <span class="stat_num">4578</span>
+                        <span class="stat_text">posts</span>
+                    </div>
+                    <div class="stat_followers">
+                        <span class="stat_num">1.3M</span>
+                        <span class="stat_text">followers</span>
+                    </div>
+                    <div class="stat_following">
+                        <span class="stat_num">4578</span>
+                        <span class="stat_text">following</span>
                     </div>
                 </div>
-
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- ---------------------------------------------------------------- -->
-
-    <div class="coverBox">
-        <div class="coverImg">
-
-            <div class="imgBox">
-                <img src="./CSS/Images/tomatoes.jpg" alt="">
-
-                <div class="editProfilePic">
-                    <a href="#!">
-                        <i class="fas fa-edit"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="accName">
-                <div class="acc">
-                    <p>Michael Arthur</p>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="callToAction">
-            <div class="elementBox">
-
-                <div class="elements">
-
-                    <div class="postCounter">
-                        <div class="countPost">
-                            <p class="Posts">
-                                <p class="postNum">4578</p>
-                                <p class="ItemName">Posts</p>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="postCounter">
-                        <div class="countPost">
-                            <p class="Posts">
-                                <p class="postNum">1.3M</p>
-                                <p class="ItemName">Followers</p>
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="postCounter">
-                        <div class="countPost">
-                            <p class="Posts" id="ps">
-                                <p class="postNum">4578</p>
-                                <p class="ItemName">Following</p>
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+        <footer class="tabs">
+            <a class="tab_item" href="/newsfeed.html">
+                <i class="fas fa-home fa-2x"></i>
+            </a>
+            <a class="tab_item" href="/notification.html">
+                <i class="fas fa-bell fa-2x"></i>
+            </a>
+            <a class="tab_item" href="/messages.html">
+                <i class="fas fa-paper-plane fa-2x"></i>
+            </a>
+            <a class="tab_item" href="/profile.html">
+                <i class="fas fa-user fa-2x"></i>
+            </a>
+        </footer>
+    </main>
 </body>
 
 </html>

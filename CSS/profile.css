@@ -1,215 +1,54 @@
-* {
-    --bg: #e7e7e7;
-    --primary: #2ce23b;
-    --red: crimson;
-    --black: #111;
-    --dev: solid 2px lime;
-    --dark-green: rgb(9, 216, 78);
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: var(--bg);
-    overflow-x: hidden;
-    font-family: sans-serif;
+.profile{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    gap: 1.5rem;
 }
+.profile_name{
+    color: var(--black);
+    /* font-weight: bolder; */
+    font-size: 2rem;
+}
+/* .profile_pic{
 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
- ::-webkit-scrollbar {
-    width: 1px;
-}
-
-hr {
-    width: 80%;
-}
-
-.pageHeader {
-    z-index: 5;
-    width: 100%;
-    height: 10vh;
-    padding: 2vmin;
-    position: absolute;
-    top: 0;
-}
-
-.pageHeader p {
-    font-size: 30px;
-    font-weight: 500;
-    padding-left: 4vmin;
-    color: var(--dark-green);
-}
-
-.container {
-    z-index: 5;
-    height: 10vh;
-    width: 100vw;
-    box-shadow: 0px 4vmin 8vmin #000000;
-    position: fixed;
-    bottom: 0;
-    background-color: #ecf3ee;
-}
-
-.container .pageNav {
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-}
-
-.container .pageNav > *{
-    width: 25vw;
-}
-
-.container .pageNav div i {
-    bottom: 0;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    color: var(--primary);
-}
-
-.container .pageNav div .counter {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    position: absolute;
-    top: -1vmin;
-    right: 30%;
-    font-weight: bold;
-    font-size: 25px;
-    color: var(--red);
-}
-
-/* desktop */
-@media screen and (min-width: 550px) {
-    .container .pageNav div .counter {
-        right: 37%;
-    }
-}
-/* mobile */
-@media screen and (max-width: 427px){
-    .container .pageNav div .counter {
-        right: 20%;
-    }
-}
-
-/* ====================================================================== */
-
-.coverBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 70vh;
-    width: 100vw;
-    border: var(--black);
-}
-.coverBox .coverImg {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 4vmin;
-}
-
-.coverBox .coverImg .imgBox {
-    height: 40vmin;
-    width: 40vmin;
-    background-color: #fff;
+} */
+.profile_edit{
+    background-color: var(--primary);
+    width: 9vmin;
+    height: 9vmin;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
-
-.coverBox .coverImg .imgBox img {
-    height: 100%;
-    width: 100%;
+.profile_pic_img{
+    width: 40vmin;
+    height: 40vmin;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid var(--primary);
 }
-
-.coverBox .coverImg .imgBox .editProfilePic {
-    height: 9vmin;
-    width: 9vmin;
-    background-color: var(--primary);
-    border-radius: 50%;
+.stats{
+    display: flex;
+    justify-content: center;
+    gap: 1.6rem;
+}
+.stat_posts,.stat_followers,.stat_following{
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    bottom: 0;
-    right: -2vmin;
+    flex-direction: column;
 }
-
-.coverBox .coverImg .imgBox .editProfilePic i {
-    color: rgb(17, 29, 20);
-    font-size: 5.2vmin;
-    font-weight: 500;
+.stat_num{
+    color: var(--primary);
+    font-weight: bolder;
 }
-
-.coverBox .coverImg .accName .acc p {
-    font-size: 7vmin;
-    color: var(--black);
-    font-weight: 500;
-}
-
-.coverBox .callToAction .elements {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.coverBox .callToAction .postCounter {
-    display: flex;
-    align-items: center;
-    height: 80px;
-    width: 80px;
-    margin: 10px;
-}
-
-.coverBox .callToAction .postCounter .countPost .postNum {
-    text-align: center;
-    color: var(--dark-green);
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.coverBox .callToAction .postCounter .countPost .ItemName {
-    text-align: center;
+.stat_text{
     color: var(--red);
-    font-size: 15px;
-    font-weight: bold;
-}
-
-/* mobile */
-@media screen and (max-width: 427px) {
-    .coverBox .coverImg .imgBox{
-        width: 50vmin;
-        height: 50vmin;
-    }
-    .coverBox .callToAction{
-        transform: scale(0.7);
-    }
-    .coverBox .coverImg .accName .acc p{
-        font-size: 10vmin;
-    }
+    font-weight: 600;
 }
