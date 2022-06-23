@@ -10,9 +10,6 @@
     /* font-weight: bolder; */
     font-size: 2rem;
 }
-/* .profile_pic{
-
-} */
 .profile_edit{
     background-color: var(--primary);
     width: 9vmin;
@@ -47,8 +44,9 @@
 .stat_num{
     color: var(--primary);
     font-weight: bolder;
+    font-size: 1.4rem;
 }
 .stat_text{
     color: var(--red);
-    font-weight: 600;
+    font-weight: 500;
 }

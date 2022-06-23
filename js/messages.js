@@ -8,7 +8,6 @@ let text = "Lorem ipsum dolor sit amet consectetur adipisicing"
 let imgs = `boys.jpg
 brain.png
 calc.png
-download.png
 first-sroll.jpg
 girls.jpg
 grp.png
@@ -18,8 +17,7 @@ img (1).jpg
 img (2).jpg
 img (3).jpg
 img (4).jpg
-img (5).jpg
-`.split("\n");
+img (5).jpg`.split("\n");
 
 imgs.forEach((img)=>{
     msgsHtml +=  `

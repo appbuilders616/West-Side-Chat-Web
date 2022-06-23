@@ -2,7 +2,7 @@
     --bg: #eaeaea;
     --bars: white;
     --primary: #2ce23b;
-    --red: crimson;
+    --red: rgb(250, 44, 85);
     --black: #111;
     --dev: solid 2px lime;
     --dark-green: rgb(9, 216, 78);
@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 .main {
     background-color: var(--bg);
@@ -72,6 +73,22 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     gap: 0.3rem;
+}
+.tab_unread_count{
+    display: none;
+}
+.tab_item--notify .tab_unread_count{
+    background: var(--red);
+    color: white;
+    position: absolute;
+    top: 8%;
+    right: 28%;
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
