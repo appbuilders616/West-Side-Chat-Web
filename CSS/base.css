@@ -1,5 +1,6 @@
 * {
-    --bg: #e7e7e7;
+    --bg: #eaeaea;
+    --bars: white;
     --primary: #2ce23b;
     --red: crimson;
     --black: #111;
@@ -31,11 +32,15 @@
     color: var(--dark-green);
     font-weight: 500;
     font-size: 2rem;
-    background: beige;
+    background: var(--bars);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 1rem;
+    box-shadow: 0px -3px 4px #000;
+}
+.header--nav{
+    font-size: 1.2rem;
 }
 .content {
     /* page content goes in here */
@@ -49,16 +54,21 @@
     z-index: 1;
     height: 10vh;
     width: 100vw;
-    /* box-shadow: 0px 4vmin 8vmin #000000; */
+    box-shadow: 0px 3px 4px #000;
     position: fixed;
     bottom: 0;
     grid-area: footer;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: beige;
+    background: var(--bars);
 }
 .tab_item {
     text-decoration: none;
     color: var(--primary);
+    flex-basis: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

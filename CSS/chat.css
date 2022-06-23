@@ -1,7 +1,50 @@
+.chats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+    gap: 0.5rem;
+}
+.chat_msg{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    gap: 1rem;
+}
+.chat_msg--left{
+    justify-content: flex-start;
+}
+.chat_msg--right{
+    justify-content: flex-end;
+}
 .bubble{
     max-width: 70vmin;
+    border-radius: 0.5rem;
+    padding: 0.8rem 0.9rem;
 }
-.msg_input{
+.chat_msg--left .bubble{
+    max-width: 50vmin;
+    background: white;
+    color: black;
+    border-bottom-left-radius: 0;
+}
+.chat_msg--right .bubble{
+    background: var(--primary);
+    color: white;
+    border-bottom-right-radius: 0;
+}
+.msg_actions{
+    justify-content: space-evenly;
+}
+.msg_actions_input{
     width: 80%;
-    height: 100%;
+    height: 60%;
+    border: 1px solid var(--primary);
+    border-radius: 0.5rem;
+}
+.msg_actions_send{
+    color: var(--primary);
 }

@@ -23,13 +23,15 @@ img (5).jpg
 
 imgs.forEach((img)=>{
     msgsHtml +=  `
-    <div class="msg">
+    <div class="msg" onclick="openChat()">
         <div class="msg_sender"> ${names[Math.floor(Math.random()*names.length)]}</div>
         <div class="msg_pic"> <img class="msg_pic_src" src="/imgs/${img}"></div>
         <div class="msg_text"> ${text}</div> 
     </div>`
 })
-console.log(msgsHtml);
 
 messages.innerHTML = msgsHtml;
-// fill the page with random number messages instead of manually typing it in the html
+
+function openChat() {
+    window.location.href = "/chat.html"
+}
