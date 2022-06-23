@@ -1,4 +1,4 @@
-let chatArr = "how are you?, I'm fine, That's great to hear!, Thanks for asking, Sure thing, Would you like to receive  a gift from me?, that would be very cool, 😏, 🤣,  😷".split(", ");
+let chatArr = "how are you?, I'm fine👌, That's great to hear!, Thanks for asking 🤩, Sure thing, Would you like to receive  a gift from me?, that would be very cool, 😏, 🤣,  😷".split(", ");
 let sender = ["chat_msg--left", "chat_msg--right"]
 const chats = document.getElementsByClassName("chats")[0];
 

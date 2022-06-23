@@ -43,7 +43,11 @@
     width: 80%;
     height: 60%;
     border: 1px solid var(--primary);
+    outline: none;
     border-radius: 0.5rem;
+}
+.msg_actions_input:focus,.msg_actions_input:active{
+    outline: 1.5px solid var(--primary);
 }
 .msg_actions_send{
     color: var(--primary);
