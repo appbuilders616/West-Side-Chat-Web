@@ -25,8 +25,8 @@
 }
 .chat_msg--left .bubble {
     max-width: 50vmin;
-    background: white;
-    color: black;
+    background: var(--chat-bg);
+    color: var(--chat-text);
     border-bottom-left-radius: 0;
 }
 .chat_msg--right .bubble {
@@ -43,6 +43,7 @@
     border: 1px solid var(--primary);
     outline: none;
     border-radius: 0.5rem;
+    background: var(--msg-input);
 }
 .msg_actions_input:focus,
 .msg_actions_input:active {

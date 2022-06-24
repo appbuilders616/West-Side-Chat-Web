@@ -21,6 +21,9 @@
     --notification-text: #212421;
     --post-bg: #f9f9f9;
     --post-boxShadow: 0 0 6px #bbb;
+    --chat-bg: var(--notification-bg);
+    --chat-text: var(--notification-text);
+    --msg-input: #e5e5e5;
 }
 .dark-mode {
     --bg: #333;
@@ -37,6 +40,9 @@
     --notification-text: #d3d3d3ea;
     --post-bg: #222;
     --post-boxShadow: 0 0 6px rgb(43, 43, 43);
+    --chat-bg: var(--notification-bg);
+    --chat-text: var(--notification-text);
+    --msg-input: #373737;
 }
 .main {
     background-color: var(--bg);
