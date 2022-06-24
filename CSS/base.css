@@ -70,6 +70,9 @@
     font-size: 0.7rem;
     gap: 0.3rem;
 }
+.tab_item--active{
+    background: rgba(0,0,0,0.04);
+}
 .tab_unread_count{
     display: none;
 }
