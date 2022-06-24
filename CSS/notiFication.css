@@ -9,10 +9,10 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: var(--notification-bg);
     border-radius: 0.5rem;
     width:calc(100% - 2rem);
     padding: 1.3rem 1rem 1.3rem 1.5rem;
-    color: #212421;
+    color: var(--notification-text);
     overflow-y: auto;
 }

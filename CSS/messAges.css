@@ -20,7 +20,7 @@
 }
 .msg:focus,
 .msg:hover {
-    background: rgba(0, 0, 0, 0.1);
+    background: var(--msg-focus);
 }
 .msg_sender,
 .msg_text,
@@ -43,11 +43,13 @@
     grid-area: sender;
     padding-left: 2rem;
     font-weight: bold;
+    color: var(--msg-sender);
 }
 .msg_text {
     grid-area: txt;
     padding-left: 2rem;
     opacity: 0.7;
+    color: var(--msg-text);
 }
 .msg_sender_online {
     width: 4vmin;

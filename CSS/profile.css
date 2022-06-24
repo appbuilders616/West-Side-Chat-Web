@@ -8,7 +8,7 @@
     height: 100%;
 }
 .profile_name{
-    color: var(--black);
+    color: var(--profile-text);
     /* font-weight: bolder; */
     font-size: 2rem;
 }

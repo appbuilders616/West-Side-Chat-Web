@@ -9,8 +9,8 @@
 }
 .post{
     border-radius: 0.3rem;
-    background: #f9f9f9;
-    box-shadow: 0 0 6px #bbb;
+    background: var(--post-bg);
+    box-shadow: var(--post-boxShadow);
     overflow: hidden;
     width: 90vmin;
     height: 100%;
@@ -49,13 +49,13 @@
 .post_sender-name {
     grid-area: profile-name;
     font-weight: bold;
-    /* padding-left: 1rem; */
+    color: var(--msg-sender);
 }
 .post_sender-last-seen {
     grid-area: last-seen;
     opacity: 0.7;
     font-size: 0.8rem;
-    /* padding-left: 1rem; */
+    color: var(--msg-text);
 }
 .post_content {
     display: flex;

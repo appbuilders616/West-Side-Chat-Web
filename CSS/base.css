@@ -1,17 +1,42 @@
 * {
-    --bg: #eaeaea;
-    --bars: white;
-    --primary: #2ce23b;
-    --red: rgb(250, 44, 85);
-    --black: #111;
-    --dev: solid 2px lime;
-    --dark-green: rgb(9, 216, 78);
     position: relative;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
+}
+.light-mode{
+    --bg: #eaeaea;
+    --bars: white;
+    --primary: #2ce23b;
+    --red: rgb(250, 44, 85);
+    --profile-text: #111;
+    --dark-green: rgb(9, 216, 78);
+    --tab-active: rgba(0,0,0,0.05);
+    --msg-focus: rgba(0, 0, 0, 0.1);
+    --msg-sender: var(--profile-text);
+    --msg-text: var(--profile-text);
+    --notification-bg: #f9f9f9;
+    --notification-text: #212421;
+    --post-bg: #f9f9f9;
+    --post-boxShadow: 0 0 6px #bbb;
+}
+.dark-mode{
+    --bg: #333;
+    --bars: #222;
+    --primary: #2ce23b;
+    --red: rgb(250, 44, 85);
+    --profile-text: #e6e6e6;
+    --dark-green: rgb(9, 216, 78);
+    --tab-active: rgba(0,0,0,0.3);
+    --msg-focus: rgba(0, 0, 0, 0.3);
+    --msg-sender: var(--profile-text);
+    --msg-text: var(--profile-text);
+    --notification-bg: #222;
+    --notification-text: #d3d3d3ea;
+    --post-bg: #222;
+    --post-boxShadow: 0 0 6px rgb(43, 43, 43);
 }
 .main {
     background-color: var(--bg);
@@ -29,17 +54,33 @@
     height: 100%;
     z-index: 1;
     color: var(--dark-green);
-    font-weight: 500;
     font-size: 2rem;
     background: var(--bars);
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding-left: 1rem;
+    padding-right: 1rem;
     box-shadow: 0px -3px 4px #000;
 }
 .header--nav{
     font-size: 1.2rem;
+}
+.header_page{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-weight: 500;
+}
+.header_mode{
+    font-size: 1.7rem;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .content {
     grid-area: content;
@@ -72,7 +113,7 @@
     gap: 0.3rem;
 }
 .tab_item--active{
-    background: rgba(0,0,0,0.04);
+    background: var(--tab-active);
 }
 .tab_unread_count{
     display: none;
