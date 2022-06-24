@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* gap: 3rem; */
 }
 .msg {
     display: grid;
@@ -23,9 +22,6 @@
 .msg:hover {
     background: rgba(0, 0, 0, 0.1);
 }
-/* .msg > *{
-    border: 2px solid;
-} */
 .msg_sender,
 .msg_text,
 .msg_pic {
@@ -52,4 +48,15 @@
     grid-area: txt;
     padding-left: 2rem;
     opacity: 0.7;
+}
+.msg_sender_online {
+    width: 4vmin;
+    height: 4vmin;
+    border-radius: 50%;
+    background: lime;
+    border: white solid 2px;
+    position: absolute;
+    bottom: 15%;
+    right: 11%;
+    transform: translate(50%,50%);
 }
