@@ -10,7 +10,7 @@ for (let i = 0; i < 30; i++) {
     switch (numOfParagraph) {
         case 1:
             txt = loremArr[0];
-        break;
+            break;
         case 2:
             txt = loremArr[0] + ". " + loremArr[1];
             break;
@@ -19,7 +19,7 @@ for (let i = 0; i < 30; i++) {
             break;
         default:
             txt = loremArr[0];
-        }
+    }
     notificationHtml += `<div class="notification">${txt}</div>`
 }
 

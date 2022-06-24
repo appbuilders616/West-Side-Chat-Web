@@ -55,7 +55,7 @@ if (darkmode) {
     document.querySelector('#dark-mode-switch').checked = 'checked'
 }
 activateTab(opentab)
-    // Function For Tab Switching Ends#################################################
+// Function For Tab Switching Ends#################################################
 
 
 
@@ -79,12 +79,12 @@ form.addEventListener("submit", (e) => {
         pField.classList.add("shake", "error");
     }
 
-    setTimeout(function() {
+    setTimeout(function () {
         eField.classList.remove("shake");
         pField.classList.remove("shake");
     }, 500);
 
-    eInput.onkeyup = function() {
+    eInput.onkeyup = function () {
         checkEmail();
     }
 
@@ -95,7 +95,7 @@ form.addEventListener("submit", (e) => {
             eField.classList.add("error");
             let errorTxt = eField.querySelector(".error-text");
 
-            (eInput.value != "") ? errorTxt.innerHTML = "Enter a valid email address": errorTxt.innerHTML = "Email cant be blank";
+            (eInput.value != "") ? errorTxt.innerHTML = "Enter a valid email address" : errorTxt.innerHTML = "Email cant be blank";
         } else {
             eField.classList.remove("error");
         }
@@ -107,7 +107,7 @@ form.addEventListener("submit", (e) => {
             pField.classList.add("error");
 
             let errorTxt = pField.querySelector(".error-text");
-            (pInput.value != "") ? errorTxt.innerHTML = "Entern a valid password": errorTxt.innerHTML = "Password cant be too short";
+            (pInput.value != "") ? errorTxt.innerHTML = "Entern a valid password" : errorTxt.innerHTML = "Password cant be too short";
         } else {
             pField.classList.remove("error");
         }

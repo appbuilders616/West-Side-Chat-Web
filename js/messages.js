@@ -19,12 +19,12 @@ img (3).jpg
 img (4).jpg
 img (5).jpg`.split("\n");
 
-imgs.forEach((img,index)=>{
+imgs.forEach((img, index) => {
     msgsHtml += `<div class="msg" onclick="openChat()">
-    <div class="msg_sender"> ${names[Math.floor(Math.random()*names.length)]}</div>
+    <div class="msg_sender"> ${names[Math.floor(Math.random() * names.length)]}</div>
     <div class="msg_pic"> 
         <img class="msg_pic_src" src="/imgs/${img}">
-        ${([0,2,3].includes(index)) ? '<span class="msg_sender_online"></span>' : ""}
+        ${([0, 2, 3].includes(index)) ? '<span class="msg_sender_online"></span>' : ""}
     </div>
     <div class="msg_text"> ${(index == 0) ? '😷😷😷' : text}</div>
 </div>`

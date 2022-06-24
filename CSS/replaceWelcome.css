@@ -10,7 +10,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
     background: rgba(0, 0, 0, 0.1) url(Images/first-sroll.jpg) center no-repeat;
     /* background-blend-mode: overlay; */
     background-repeat: no-repeat;
@@ -22,30 +22,31 @@ body{
     color: white;
     overflow: hidden;
 }
-.main{
+.main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.header{
+.header {
     font-size: 2rem;
     font-weight: bolder;
 }
-.content{
+.content {
     width: 100vmin;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.onboard{
+.onboard {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
-.onboard_login, .onboard_signup{
+.onboard_login,
+.onboard_signup {
     padding: 0.9rem 2rem;
     border: none;
     text-transform: uppercase;

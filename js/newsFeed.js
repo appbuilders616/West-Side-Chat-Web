@@ -18,12 +18,12 @@ img (3).jpg
 img (4).jpg
 img (5).jpg`.split("\n");
 
-imgs.forEach((img)=>{
-    postsHtml +=  `
+imgs.forEach((img) => {
+    postsHtml += `
     <div class="post">
         <div class="post_header">
             <div class="post_sender-pic"> <img class="post_pic_src" src="/imgs/${img}"></div>
-            <div class="post_sender-name"> ${names[Math.floor(Math.random()*names.length)]}</div>
+            <div class="post_sender-name"> ${names[Math.floor(Math.random() * names.length)]}</div>
             <div class="post_sender-last-seen"> ${lastSeen}</div>
         </div>
         <div class="post_content"><img class="post_content_src" src="/imgs/${img}"></div>
@@ -42,10 +42,10 @@ posts.innerHTML = postsHtml;
 // reactions.forEach((reaction)=> {
 //     reaction.addEventListener("click",this)
 // })
-function handleReactions (event){
+function handleReactions(event) {
     if (event.children[0].classList.contains("fas")) {
-        event.children[0].classList.replace("fas","far");
+        event.children[0].classList.replace("fas", "far");
     } else {
-        event.children[0].classList.replace("far","fas");        
+        event.children[0].classList.replace("far", "fas");
     }
 }

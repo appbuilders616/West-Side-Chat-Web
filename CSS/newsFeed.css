@@ -2,12 +2,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width: calc(100vw - 2rem); */
-    /* height: 100%; */
     gap: 0.7rem;
     flex-wrap: wrap;
 }
-.post{
+.post {
     border-radius: 0.3rem;
     background: var(--post-bg);
     box-shadow: var(--post-boxShadow);
@@ -23,9 +21,6 @@
     grid-template-columns: 1.6fr 6fr;
     justify-content: center;
     align-items: center;
-    /* width: calc(100% - 2rem); */
-    /* height: 13vmin; */
-    /* box-shadow: 0 0 4px 1px #ccc; */
     padding: 0.5rem;
 }
 .post_sender-pic,
@@ -69,16 +64,15 @@
     height: 40vmin;
     object-fit: cover;
 }
-.post_reactions{
+.post_reactions {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 10vmin;
-    /* background: lime; */
 }
 .post_reactions_like,
 .post_reactions_comment,
-.post_reactions_share{
+.post_reactions_share {
     width: 100%;
     height: 100%;
     display: flex;
@@ -86,27 +80,27 @@
     align-items: center;
     gap: 0.4rem;
 }
-.post_reactions_like{
+.post_reactions_like {
     color: var(--red);
 }
-.post_reactions_comment{
+.post_reactions_comment {
     color: rgb(64, 194, 86);
 }
-.post_reactions_share{
+.post_reactions_share {
     color: rgb(0, 162, 255);
 }
 
 @media screen and (min-width: 450px) {
-    .post{
+    .post {
         width: 65vmin;
     }
     .post_sender-last-seen,
-    .post_sender-name{
+    .post_sender-name {
         padding-left: 0.9rem;
-    } 
+    }
 }
 @media screen and (min-width: 700px) {
-    .post{
+    .post {
         width: 50vmin;
     }
 }

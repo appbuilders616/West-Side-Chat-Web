@@ -32,7 +32,7 @@ function addMsg() {
         msgInput.value = "";
     }
 }
-sendIcon.addEventListener("click",()=>{
+sendIcon.addEventListener("click", () => {
     addMsg();
     updateChat();
 })
