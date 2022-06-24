@@ -23,7 +23,7 @@
     --post-boxShadow: 0 0 6px #bbb;
     --chat-bg: var(--notification-bg);
     --chat-text: var(--notification-text);
-    --msg-input: #e5e5e5;
+    --msg-input: #f2f2f2;
 }
 .dark-mode {
     --bg: #333;
