@@ -1,0 +1,54 @@
+* {
+    --bg: #e7e7e7;
+    --primary: #2ce23b;
+    --red: crimson;
+    --black: #111;
+    --dev: solid 2px lime;
+    --dark-green: rgb(9, 216, 78);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgba(0, 0, 0, 0.1) url(Images/first-sroll.jpg) center no-repeat;
+    /* background-blend-mode: overlay; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    color: var(--black);
+    color: white;
+    overflow: hidden;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.header{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.content{
+    width: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.onboard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.onboard_login, .onboard_signup{
+    padding: 0.9rem 2rem;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 0.4rem;
+    font-weight: bolder;
+}
