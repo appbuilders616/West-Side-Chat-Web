@@ -19,4 +19,7 @@ where `x` is noun, etc
 * Refactor on the go
 * Be consistent
 
+#### Media
+Compress or use small file sizes for pictures, videos,pdfs etc
+
 ### Keep Learning!
