@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/fontawesome-6.1.1/css/all.min.css">
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/newsfeed.css">
+    <link rel="stylesheet" href="/css/messages.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -17,16 +17,16 @@
 <body class="light-mode">
     <main class="main">
         <header class="header">
-            <div class="header_page">Newsfeed</div>
+            <div class="header_page">Messages</div>
             <div class="header_mode"><i class="fas fa-sun"></i></div>
         </header>
 
         <section class="content">
-            <div class="posts"></div>
+            <div class="messages"></div>
         </section>
 
         <footer class="tabs">
-            <a class="tab_item tab_item--active" href="/newsfeed.html">
+            <a class="tab_item" href="/newsfeed.html">
                 <i class="fas fa-home fa-2x"></i>
                 <span class="tab_item_name">Home</span>
             </a>
@@ -34,9 +34,10 @@
                 <i class="fas fa-bell fa-2x"></i>
                 <span class="tab_item_name">Notifications</span>
             </a>
-            <a class="tab_item" href="/messages.html">
+            <a class="tab_item tab_item--notify tab_item--active" href="/messages.html">
                 <i class="fas fa-paper-plane fa-2x"></i>
                 <span class="tab_item_name">Messages</span>
+                <span class="tab_unread_count">3</span>
             </a>
             <a class="tab_item" href="/profile.html">
                 <i class="fas fa-user fa-2x"></i>
@@ -44,7 +45,8 @@
             </a>
         </footer>
     </main>
-    <script src="/js/newsfeed.js"></script>
+
+    <script src="/js/messages.js"></script>
     <script src="/js/mode.js"></script>
 </body>
 

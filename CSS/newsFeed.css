@@ -1,206 +1,106 @@
-    body {
-        background-color: #ececec;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        font-family: sans-serif;
+.posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+}
+.post {
+    border-radius: 0.3rem;
+    background: var(--post-bg);
+    box-shadow: var(--post-boxShadow);
+    overflow: hidden;
+    width: 90vmin;
+    height: 100%;
+}
+.post_header {
+    display: grid;
+    grid-template-areas:
+        "profile-pic profile-name"
+        "profile-pic last-seen";
+    grid-template-columns: 1.6fr 6fr;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.post_sender-pic,
+.post_sender-last-seen,
+.post_sender-name {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.post_sender-pic {
+    grid-area: profile-pic;
+    justify-content: center;
+}
+.post_pic_src {
+    width: 10vmin;
+    height: 10vmin;
+    border-radius: 50%;
+    box-shadow: 0 0 2px black;
+}
+.post_sender-name {
+    grid-area: profile-name;
+    font-weight: bold;
+    color: var(--msg-sender);
+}
+.post_sender-last-seen {
+    grid-area: last-seen;
+    opacity: 0.7;
+    font-size: 0.8rem;
+    color: var(--msg-text);
+}
+.post_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.post_content_src {
+    width: 100%;
+    height: 40vmin;
+    object-fit: cover;
+}
+.post_reactions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vmin;
+}
+.post_reactions_like,
+.post_reactions_comment,
+.post_reactions_share {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+.post_reactions_like {
+    color: var(--red);
+}
+.post_reactions_comment {
+    color: rgb(64, 194, 86);
+}
+.post_reactions_share {
+    color: rgb(0, 162, 255);
+}
+
+@media screen and (min-width: 450px) {
+    .post {
+        width: 65vmin;
     }
-    
-    a {
-        text-decoration: none;
+    .post_sender-last-seen,
+    .post_sender-name {
+        padding-left: 0.9rem;
     }
-    
-    ul {
-        list-style: none;
+}
+@media screen and (min-width: 700px) {
+    .post {
+        width: 50vmin;
     }
-    
-     ::-webkit-scrollbar {
-        width: 1px;
-    }
-    
-    hr {
-        width: 80%;
-    }
-    
-    .pageHeader {
-        z-index: 10;
-        height: 60px;
-        width: 100%;
-        position: sticky;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        top: 0;
-        padding: 0%;
-        background-color: #ececec;
-    }
-    
-    .pageHeader p {
-        font-size: 30px;
-        font-weight: 500;
-        margin: 20px;
-        color: green;
-    }
-    
-    .container {
-        z-index: 10;
-        height: 50px;
-        width: 100%;
-        box-shadow: 16px 16px 18px #cbced1, -16px -16px 18px #cab8b8;
-        position: fixed;
-        bottom: 0;
-        background-color: #F0FFF0;
-    }
-    
-    .container .pageNav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-    }
-    
-    .container .pageNav span {
-        width: 70px;
-        height: 70%;
-        display: inline-block;
-    }
-    
-    .container .pageNav span i {
-        width: 80px;
-        bottom: 0;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        font-size: 30px;
-        color: rgb(142, 214, 33);
-    }
-    
-    .container .pageNav span .counter {
-        height: 20px;
-        width: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        margin-left: 50px;
-        font-weight: bold;
-        font-size: 25px;
-        color: rgb(134, 41, 24);
-    }
-    /* ------------------FEEDS=----------------------- */
-    
-    .newsFeedContainer {
-        margin-top: 20px;
-    }
-    
-    .newsFeedContainer .newsFeedBox .singleFeed {
-        height: 70vh;
-        width: 100%;
-        position: relative;
-        margin-top: 20px;
-    }
-    
-    .newsFeedContainer .newsFeedBox .singleFeed:last-child {
-        margin-bottom: 50px;
-    }
-    /* ==================For AccNAme &&&&&&&& Pic============== */
-    
-    .newsFeedContainer .newsFeedBox .singleFeed .profile {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: 10vh;
-        margin-bottom: 5px;
-        margin-left: 30px;
-        width: 100%;
-    }
-    
-    .newsFeedBox .singleFeed .profile .postDate {
-        margin: 27px -90px;
-    }
-    
-    .newsFeedBox .singleFeed .profile .postDate p {
-        color: #000;
-        font-weight: 500;
-        font-size: 15px;
-    }
-    
-    .newsFeedBox .singleFeed .profile .profilePic {
-        height: 60px;
-        width: 60px;
-        position: absolute;
-    }
-    
-    .newsFeedBox .singleFeed .profile .profilePic img {
-        height: 100%;
-        width: 100%;
-        border-radius: 50%;
-    }
-    
-    .newsFeedBox .singleFeed .profile .accName {
-        margin-left: 10px;
-        font-size: 20px;
-        font-weight: bold;
-        color: rgb(134, 41, 24);
-    }
-    
-    .newsFeedBox .singleFeed .profile .accName p {
-        margin-left: 70px;
-    }
-    /* =====================FOr Post Image========================== */
-    
-    .newsFeedContainer .newsFeedBox .imageBox {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 20px;
-        position: absolute;
-        height: 50vh;
-        width: 100%;
-    }
-    
-    .newsFeedBox .singleFeed .imageBox img {
-        border-radius: 30px;
-        height: 100%;
-        width: 90%;
-        position: relative;
-    }
-    /* ====================For Reaction================================== */
-    
-    .newsFeedBox .singleFeed .reactionSystem {
-        height: 10vh;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-    }
-    
-    .newsFeedBox .singleFeed .reactionSystem ul {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-right: 200px;
-    }
-    
-    .newsFeedBox .singleFeed .reactionSystem ul li {
-        margin: 10px;
-        display: flex;
-        justify-content: space-between;
-        top: 40px;
-        align-items: center;
-    }
-    
-    .newsFeedBox .singleFeed .reactionSystem ul li i {
-        font-size: 30px;
-        color: yellowgreen;
-    }
-    
-    .newsFeedBox .singleFeed .reactionSystem ul .likeSys {
-        display: flex;
-        color: inherit;
-        font-size: 20px;
-    }
+}
