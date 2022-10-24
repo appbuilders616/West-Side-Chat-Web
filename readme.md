@@ -6,7 +6,11 @@ A simple, customizable, and a beautiful Online Chating site focused to gather We
 <br>
 
 ## Development Outline
-
+#### Live Site Preview
+The site can be previewed at <br>
+[westsidechat.netlify.app/profile.html](https://westsidechat.netlify.app/profile.html)
+<br>
+Feature branches are also live via <br>[InsertBranchName--westsidechat.netlify.app/profile.html]()
 #### HTML & CSS
 Adopt `BEM CSS` naming convention for `html` and `css` files
 
