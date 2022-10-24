@@ -1,10 +1,25 @@
-body {
-    background-color: #ececec;
+* {
+    --bg: #e7e7e7;
+    --primary: #2ce23b;
+    --red: crimson;
+    --black: #111;
+    --dev: solid 2px lime;
+    --dark-green: rgb(9, 216, 78);
+    position: relative;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body {
+    background-color: var(--bg);
     overflow-x: hidden;
     font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
 }
 
 a {
@@ -24,74 +39,78 @@ hr {
 }
 
 .pageHeader {
-    z-index: 10;
-    height: 60px;
+    z-index: 5;
     width: 100%;
-    position: sticky;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    height: 10vh;
+    padding: 2vmin;
+    position: absolute;
     top: 0;
-    padding: 0%;
-    background-color: #ececec;
 }
 
 .pageHeader p {
     font-size: 30px;
     font-weight: 500;
-    margin: 20px;
-    color: green;
+    padding-left: 4vmin;
+    color: var(--dark-green);
 }
 
 .container {
-    z-index: 10;
-    height: 50px;
-    width: 100%;
-    box-shadow: 16px 16px 18px #cbced1, -16px -16px 18px #cab8b8;
+    z-index: 5;
+    height: 10vh;
+    width: 100vw;
+    box-shadow: 0px 4vmin 8vmin #000000;
     position: fixed;
     bottom: 0;
-    background-color: #F0FFF0;
+    background-color: #ecf3ee;
 }
 
 .container .pageNav {
+    width: 100vw;
+    height: 10vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
 
-.container .pageNav span {
-    width: 70px;
-    height: 70%;
-    display: inline-block;
+.container .pageNav > *{
+    width: 25vw;
 }
 
-.container .pageNav span i {
-    width: 80px;
+.container .pageNav div i {
     bottom: 0;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
     font-size: 30px;
-    color: rgb(142, 214, 33);
+    color: var(--primary);
 }
 
-.container .pageNav span .counter {
-    height: 20px;
-    width: 20px;
+.container .pageNav div .counter {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     position: absolute;
-    top: 0;
-    margin-left: 50px;
+    top: -1vmin;
+    right: 30%;
     font-weight: bold;
     font-size: 25px;
-    color: rgb(134, 41, 24);
+    color: var(--red);
 }
 
+/* desktop */
+@media screen and (min-width: 550px) {
+    .container .pageNav div .counter {
+        right: 37%;
+    }
+}
+/* mobile */
+@media screen and (max-width: 427px){
+    .container .pageNav div .counter {
+        right: 20%;
+    }
+}
 
 /* ====================================================================== */
 
@@ -100,25 +119,24 @@ hr {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
+    height: 70vh;
+    width: 100vw;
+    border: var(--black);
 }
-
 .coverBox .coverImg {
-    height: 50vh;
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    flex-direction: column;
+    gap: 4vmin;
 }
 
 .coverBox .coverImg .imgBox {
-    height: 30vh;
-    width: 60%;
+    height: 40vmin;
+    width: 40vmin;
     background-color: #fff;
     border-radius: 50%;
-    position: absolute;
-    top: 30px;
 }
 
 .coverBox .coverImg .imgBox img {
@@ -126,85 +144,72 @@ hr {
     width: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid greenyellow;
+    border: 5px solid var(--primary);
 }
 
 .coverBox .coverImg .imgBox .editProfilePic {
-    height: 60px;
-    width: 60px;
-    background-color: rgb(219, 201, 201);
+    height: 9vmin;
+    width: 9vmin;
+    background-color: var(--primary);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 30px;
-    left: 160px;
+    bottom: 0;
+    right: -2vmin;
 }
 
 .coverBox .coverImg .imgBox .editProfilePic i {
-    color: rgb(119, 20, 20);
-    font-size: 25px;
+    color: rgb(17, 29, 20);
+    font-size: 5.2vmin;
     font-weight: 500;
 }
 
-.coverBox .coverImg .accName {
-    position: absolute;
-    height: 50px;
-    width: 100%;
-    bottom: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .coverBox .coverImg .accName .acc p {
-    font-size: 30px;
-    color: #000;
+    font-size: 7vmin;
+    color: var(--black);
     font-weight: 500;
 }
 
 .coverBox .callToAction .elements {
-    height: 10vh;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    bottom: 50px;
 }
 
 .coverBox .callToAction .postCounter {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-direction: row;
     height: 80px;
     width: 80px;
     margin: 10px;
 }
 
-.coverBox .callToAction .postCounter .countPost {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 .coverBox .callToAction .postCounter .countPost .postNum {
-    line-height: normal;
     text-align: center;
-    color: rgb(50, 80, 6);
+    color: var(--dark-green);
     font-size: 20px;
     font-weight: bold;
-    line-height: 0px;
 }
 
 .coverBox .callToAction .postCounter .countPost .ItemName {
-    line-height: normal;
     text-align: center;
-    color: #FF0000;
+    color: var(--red);
     font-size: 15px;
     font-weight: bold;
-    line-height: 0px;
+}
+
+/* mobile */
+@media screen and (max-width: 427px) {
+    .coverBox .coverImg .imgBox{
+        width: 50vmin;
+        height: 50vmin;
+    }
+    .coverBox .callToAction{
+        transform: scale(0.7);
+    }
+    .coverBox .coverImg .accName .acc p{
+        font-size: 10vmin;
+    }
 }
